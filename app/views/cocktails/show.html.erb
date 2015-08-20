@@ -1,2 +1,14 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><%= @cocktail.name.capitalize %></h1>
+      <p>Here are the ingredients you need to make a <%= @cocktail.name %>:</p>
+
+
+      <%= link_to "back", cocktails_path %>
+
+
+
+    </div>
+  </div>
+</div>

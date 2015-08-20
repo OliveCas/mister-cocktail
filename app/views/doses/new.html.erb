@@ -1,2 +1,20 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><%= Add dose to @cocktail.name.capitalize %></h1>
+
+     <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :description %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+
+      <%= link_to "back", cocktail_path(@cocktail) %>
+
+
+
+    </div>
+  </div>
+</div>
+
+
