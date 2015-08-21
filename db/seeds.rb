@@ -5,20 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Ingredient.destroy_all
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "lime")
-Ingredient.create(name: "white egg")
-Ingredient.create(name: "orange juice")
-Ingredient.create(name: "koala blood")
-Ingredient.create(name: "tomato juice")
 
 Cocktail.destroy_all
-Cocktail.create([
-  {name: "whisky sour"},
-  {name: "bloody mary"},
-  {name: "old fashioned"},
-  {name: "mojito"},
-  ])
+Ingredient.destroy_all
+ingredients = %w(lemon ice mint leaves redbull jagermeister sugar tonic gin rhum)
+ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
+
